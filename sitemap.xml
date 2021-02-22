@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nittre.github.io/</loc>
+    <lastmod>2021-02-22T14:49:21+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nittre.github.io/blog/</loc>
     <lastmod>2021-02-22T14:49:21+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://nittre.github.io/blog/second-blog/</loc>
-    <lastmod>2021-02-22T14:49:21+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nittre.github.io/</loc>
     <lastmod>2021-02-22T14:49:21+09:00</lastmod>
   </url>
   
