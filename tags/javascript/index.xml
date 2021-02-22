@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>매일의 공부</title>
-    <link>https://nittre.github.io/</link>
-    <description>Recent content on 매일의 공부</description>
+    <title>javascript on 매일의 공부</title>
+    <link>https://nittre.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on 매일의 공부</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© {year}</copyright>
     <lastBuildDate>Mon, 22 Feb 2021 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nittre.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nittre.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
