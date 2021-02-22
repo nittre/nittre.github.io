@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>매일의 공부</title>
+    <link>https://nittre.github.io/</link>
+    <description>Recent content on 매일의 공부</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© {year}</copyright>
+    <lastBuildDate>Mon, 22 Feb 2021 14:49:21 +0900</lastBuildDate>
+    
+	<atom:link href="https://nittre.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Second Blog</title>
+      <link>https://nittre.github.io/blog/second-blog/</link>
+      <pubDate>Mon, 22 Feb 2021 14:49:21 +0900</pubDate>
+      
+      <guid>https://nittre.github.io/blog/second-blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>First Blog</title>
+      <link>https://nittre.github.io/blog/first-blog/</link>
+      <pubDate>Mon, 22 Feb 2021 14:46:25 +0900</pubDate>
+      
+      <guid>https://nittre.github.io/blog/first-blog/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
