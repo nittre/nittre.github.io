@@ -96,7 +96,6 @@
           </header>
           <article class="post__content">
               
-<h2 id="til-015">TIL 015<a class="anchor" href="#til-015">#</a></h2>
 <h2 id="-today-log">☕ Today Log<a class="anchor" href="#-today-log">#</a></h2>
 <p>✔️ Git 명령어와 프로젝트 workflow를 배웠다.<br>
 ✔️ 페어와 함께 Git을 실습해보았다. <strong>Git에서는 commit한 상태를 기준으로 conflict 여부를 확인한다</strong>!<br>
@@ -117,15 +116,12 @@ $ nano # nano editor를 실행한다
 <li><code>git clone &lt;repo_url&gt;</code>로 원격 저장소에서 로컬 저장소로 가져온다</li>
 <li>A와 B는 로컬 저장소에 서로의 원격 저장소를 자신의 로컬 저장소 pair 브랜치로 가져온다 (<code>git remote add pair &lt;repo_url&gt;</code>)</li>
 <li>먼저 A가 작업을 완료한 후, 로컬 저장소의 내용을 A의 원격 저장소(origin)에 push한다. (<code>git push origin master</code>);</li>
-</ol>
-<p><code>git push &lt;repo_name&gt; &lt;branch_name&gt;</code></p>
-<ol>
 <li>(B는 이 변경사항으로 작업하기 위해) <code>git pull pair master</code>로 자신의 로컬저장소 master 브랜치에 A의 변경사항을 반영한다</li>
 <li>B도 코드 작업을 완료했으면, 로컬 저장소의 내용을 커밋하고, 원격 저장소에 push한다.</li>
 </ol>
 <h2 id="git-충돌-해결">Git 충돌 해결<a class="anchor" href="#git-충돌-해결">#</a></h2>
-<p>내가 local에서 remote repo를 pull하면, git은 마지막으로 commit된 내 local branch 코드와 pull하는 remote branch 코드를 비교해서 remote branch 코드를 merge한다. 그런데, local과 remote의 코드가 상충되는 경우, <strong>merge conflict</strong>가 발생한다.</p>
-<p><img src="../images/git_conflict.png" alt="git conflict"></p>
+<p>local과 remote의 코드가 상충되는 경우, <strong>merge conflict</strong>가 발생한다.</p>
+<p><img src="../../images/git_conflict.png" alt="git conflict"></p>
 <ul>
 <li>HEAD 부분: current change. 내가 만든 변경사항</li>
 <li>HEAD 밑 부분: incomming change. 상대방으로부터 받은 변경사항.</li>
@@ -133,7 +129,8 @@ $ nano # nano editor를 실행한다
 <p>current change 또는 incomming change를 accept 하거나, 둘 다 accept 할 수도 있다.</p>
 <p>아무튼 conflict를 해결하고, <code>git add</code>를 해주면 git이 conflict를 해결했음을 확인한다.</p>
 <h3 id="그-외-상황">그 외 상황<a class="anchor" href="#그-외-상황">#</a></h3>
-<p>remote에 변경사항이 있고, 로컬에서  commit하지 않은 변경사항이 남아있는 상태에서 <code>git pull</code>을 입력하면, git은 먼저 commit하라고 말하며 pull을 진행하지 않는다.</p>
+<h4 id="로컬에서-commit-하지-않은-변경사항이-있는-경우">로컬에서 commit 하지 않은 변경사항이 있는 경우</h4>
+<p>remote에 변경사항이 있고, 로컬에서  commit하지 않은 변경사항이 남아있는 상태에서 <code>git pull</code>을 입력하면 git은 <strong>먼저 commit하라고 말하며 pull을 진행하지 않는다.</strong></p>
 <pre><code class="language-markdown">// remote
 abc
 def // 여기까지 작성하고 local에서 pull 진행함
@@ -144,7 +141,8 @@ abc
 def  // remote에서 pull 해옴
 blah  // 아직 commit하지 않은 상태
 </code></pre>
-<p><img src="../images/gitpullwithoutcommit.png" alt="git pull without commit"></p>
+<p><img src="../../images/gitpullwithoutcommit.png" alt="git pull without commit"></p>
+<h4 id="conflict가-발생하지-않는-코드-추가">conflict가 발생하지 않는 코드 추가</h4>
 <p>remote에서 pull을 한 후, local에서 remote 코드를 건드리지 않고 코드를 추가한 경우에는 이렇게 뜬다.</p>
 <pre><code class="language-bash">// remote
 abc
@@ -155,7 +153,7 @@ abc
 def  // 여기까지 pull 해옴
 ghj  // 새로 추가
 </code></pre>
-<p><img src="../images/gitpullandnochange.png" alt="git pull and no change"></p>
+<p><img src="../../images/gitpullandnochange.png" alt="git pull and no change"></p>
 <h2 id="git-branch">Git branch<a class="anchor" href="#git-branch">#</a></h2>
 <p>브랜치는 <strong>분리된 작업 영역</strong>으로, 일종의 사본이다. 브랜치는 독립된 작업 영역이기 때문에 원본이나 다른 사본에 영향을 미치지 않는다.</p>
 <p>따라서 여러 명이 하나의 원본을 두고 작업할 때 브랜치를 만들어 해당 브랜치에서 작업하면 <strong>원본에 영향을 주지 않고 다양한 시도를 할 수 있다.</strong></p>
@@ -167,7 +165,8 @@ ghj  // 새로 추가
 <li><code>git checkout -b &lt;branch_name&gt;</code>: 브랜치를 생성하고 해당 브랜치로 작업 공간 이동</li>
 </ul>
 <h2 id="git-workflow">Git Workflow<a class="anchor" href="#git-workflow">#</a></h2>
-<p>master repo(upstream)(master, dev branch) → (fork) → my remote repo(master, dev branch) → (clone) → local repo(dev branch)</p>
+<p>master repo(upstream)(master, dev branch) → (fork) → my remote repo(master, dev branch) → (clone) → local repo(dev branch)
+<img src="../../images/git-workflow.png" alt="git workflow"></p>
 <ol>
 <li>우리의 목적은 upstream branch에서 새로운 기능을 추가하는 것이기 때문에 local repo의 dev branch는 항상 최신화되어 있어야 하며, upstream의 dev branch에서 pull 해야 한다.</li>
 <li>최신화된 local repo의 dev branch에서 기능 별로 새로운  feature branch를 만들어 작업한다.</li>
@@ -175,20 +174,21 @@ ghj  // 새로 추가
 <li>그리고 remote branch의 feature branch를 upstream repo의 dev branch에 pull request를 날린다.</li>
 <li>upstream repo 관리자가 이 pr을 확인하고 merge하면 하나의 기능 개발이 끝난다.</li>
 </ol>
+<blockquote>
 <p>local repo에서 만든 branch를 remote repo에 올릴 수 있다.
 <code>git push &lt;remote repo&gt; &lt;local branch&gt;</code> 를 하면, remote repo에 해당 branch가 생성된다. (기존에 있는 경우 push만 됨)</p>
-<p><img src="../images/git-workflow.png" alt="git workflow"></p>
+</blockquote>
 <h2 id="git-merge와-rebase">Git merge와 rebase<a class="anchor" href="#git-merge와-rebase">#</a></h2>
 <p>다음과 같이 master 브랜치와, master 브랜치에서 파생된 func1 브랜치가 있다고 가정하자</p>
-<p><img src="../images/gitflow.png" alt="git flow"></p>
+<p><img src="../../images/gitflow.png" alt="git flow"></p>
 <p>merge는 func1 브랜치의 최신 커밋을 master 브랜치의 최신 커밋과 병합한다.</p>
 <pre><code class="language-markdown">$ git merge master func1
 </code></pre>
-<p><img src="../images/gitmerge.png" alt="git merge"></p>
+<p><img src="../../images/gitmerge.png" alt="git merge"></p>
 <p>반면, rebase는 func1 브랜치의 base를 master 브랜치의 커밋으로 옮긴다. 말그대로 <strong>base를 재설정</strong>한다.</p>
 <pre><code class="language-markdown">$ git rebase master func1
 </code></pre>
-<p><img src="../images/gitrebase.png" alt="git rebase"></p>
+<p><img src="../../images/gitrebase.png" alt="git rebase"></p>
 <p>해당 명령어를 받으면, git은 다음의 과정을 거쳐 rebase를 수행한다.</p>
 <ol>
 <li>base에서 분기되어 추가된 func1 브랜치의 커밋들을 추려 보관한다</li>
@@ -254,7 +254,6 @@ ghj  // 새로 추가
           
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#til-015">TIL 015</a></li>
     <li><a href="#-today-log">☕ Today Log</a></li>
     <li><a href="#nano-사용법">nano 사용법</a></li>
     <li><a href="#git으로-협업하기">Git으로 협업하기</a></li>
