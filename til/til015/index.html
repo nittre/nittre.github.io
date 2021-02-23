@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>TIL 015 | 매일의 공부</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.319abde7a50351fa807b76128658a33f5f7306ae344682efc9012fad2a11059f.css" integrity="sha256-MZq956UDUfqAe3YShlijP19zBq40RoLvyQEvrSoRBZ8="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.811e28e525f977dafcda16b147e8ad1d07a4063b244adc598f3ea8289723c803.css" integrity="sha256-gR4o5SX5d9r82haxR&#43;itHQekBjskStxZjz6oKJcjyAM="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    { 
+      "@context": "http://schema.org", 
+      "@type": "WebSite", 
+      "url": "https:\/\/nittre.github.io\/til\/til015\/",
+      "name": "TIL 015",
+      "author": {
+        "@type": "Person",
+        "name": ""
+      },
+      "description": ""
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">About</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/til">Today I Learned</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">TIL 015</h1>
+            <time datetime="2021-02-23 16:48:19 &#43;0900 KST" class="post__date">2021-02-23</time> 
+          </header>
+          <article class="post__content">
+              
+<h2 id="til-015">TIL 015<a class="anchor" href="#til-015">#</a></h2>
+<h2 id="-today-log">☕ Today Log<a class="anchor" href="#-today-log">#</a></h2>
+<p>✔️ Git 명령어와 프로젝트 workflow를 배웠다.<br>
+✔️ 페어와 함께 Git을 실습해보았다. <strong>Git에서는 commit한 상태를 기준으로 conflict 여부를 확인한다</strong>!<br>
+🔥 추가 공부: git rebase 공부</p>
+<h2 id="nano-사용법">nano 사용법<a class="anchor" href="#nano-사용법">#</a></h2>
+<p>nano는 리눅스에서 기본 제공하는 cli editor이다. AWS 같은 원격 서버 환경에 접근하기 위해 원격에서 텍스트 파일을 편집해야 하는 상황이 발생할 수 있기 때문에 CLI editor 사용 방법을 알아두어야 한다.</p>
+<pre><code class="language-bash">$ nano hello.js # hello.js를 nano에서 연다
+$ nano # nano editor를 실행한다
+
+</code></pre>
+<p><code>^R</code>: 파일 열기</p>
+<p><code>^T</code>: 파일 탐색</p>
+<p><code>^X</code>: 파일 저장 후 종료</p>
+<p><code>^O</code>: 파일 저장</p>
+<h2 id="git으로-협업하기">Git으로 협업하기<a class="anchor" href="#git으로-협업하기">#</a></h2>
+<ol>
+<li>프로젝트에서 각자 fork를 뜬다.</li>
+<li><code>git clone &lt;repo_url&gt;</code>로 원격 저장소에서 로컬 저장소로 가져온다</li>
+<li>A와 B는 로컬 저장소에 서로의 원격 저장소를 자신의 로컬 저장소 pair 브랜치로 가져온다 (<code>git remote add pair &lt;repo_url&gt;</code>)</li>
+<li>먼저 A가 작업을 완료한 후, 로컬 저장소의 내용을 A의 원격 저장소(origin)에 push한다. (<code>git push origin master</code>);</li>
+</ol>
+<p><code>git push &lt;repo_name&gt; &lt;branch_name&gt;</code></p>
+<ol>
+<li>(B는 이 변경사항으로 작업하기 위해) <code>git pull pair master</code>로 자신의 로컬저장소 master 브랜치에 A의 변경사항을 반영한다</li>
+<li>B도 코드 작업을 완료했으면, 로컬 저장소의 내용을 커밋하고, 원격 저장소에 push한다.</li>
+</ol>
+<h2 id="git-충돌-해결">Git 충돌 해결<a class="anchor" href="#git-충돌-해결">#</a></h2>
+<p>내가 local에서 remote repo를 pull하면, git은 마지막으로 commit된 내 local branch 코드와 pull하는 remote branch 코드를 비교해서 remote branch 코드를 merge한다. 그런데, local과 remote의 코드가 상충되는 경우, <strong>merge conflict</strong>가 발생한다.</p>
+<p><img src="../images/git_conflict.png" alt="git conflict"></p>
+<ul>
+<li>HEAD 부분: current change. 내가 만든 변경사항</li>
+<li>HEAD 밑 부분: incomming change. 상대방으로부터 받은 변경사항.</li>
+</ul>
+<p>current change 또는 incomming change를 accept 하거나, 둘 다 accept 할 수도 있다.</p>
+<p>아무튼 conflict를 해결하고, <code>git add</code>를 해주면 git이 conflict를 해결했음을 확인한다.</p>
+<h3 id="그-외-상황">그 외 상황<a class="anchor" href="#그-외-상황">#</a></h3>
+<p>remote에 변경사항이 있고, 로컬에서  commit하지 않은 변경사항이 남아있는 상태에서 <code>git pull</code>을 입력하면, git은 먼저 commit하라고 말하며 pull을 진행하지 않는다.</p>
+<pre><code class="language-markdown">// remote
+abc
+def // 여기까지 작성하고 local에서 pull 진행함
+newWord  // remote에서 새로 추가된 코드
+</code></pre>
+<pre><code class="language-markdown">// local
+abc
+def  // remote에서 pull 해옴
+blah  // 아직 commit하지 않은 상태
+</code></pre>
+<p><img src="../images/gitpullwithoutcommit.png" alt="git pull without commit"></p>
+<p>remote에서 pull을 한 후, local에서 remote 코드를 건드리지 않고 코드를 추가한 경우에는 이렇게 뜬다.</p>
+<pre><code class="language-bash">// remote
+abc
+def
+</code></pre>
+<pre><code class="language-markdown">// local - git pull 한 후 ghj 추가
+abc
+def  // 여기까지 pull 해옴
+ghj  // 새로 추가
+</code></pre>
+<p><img src="../images/gitpullandnochange.png" alt="git pull and no change"></p>
+<h2 id="git-branch">Git branch<a class="anchor" href="#git-branch">#</a></h2>
+<p>브랜치는 <strong>분리된 작업 영역</strong>으로, 일종의 사본이다. 브랜치는 독립된 작업 영역이기 때문에 원본이나 다른 사본에 영향을 미치지 않는다.</p>
+<p>따라서 여러 명이 하나의 원본을 두고 작업할 때 브랜치를 만들어 해당 브랜치에서 작업하면 <strong>원본에 영향을 주지 않고 다양한 시도를 할 수 있다.</strong></p>
+<h3 id="브랜치-만들기">브랜치 만들기<a class="anchor" href="#브랜치-만들기">#</a></h3>
+<p>브랜치는 <strong>현재 작업 공간</strong>을 베이스로 만들어진다. 따라서, 내가 <strong>현재 어디서 작업을 하고 있는지 확인</strong>해야 한다. 그리고 현재 작업 공간에서 새로운 브랜치를 만들어 해당 브랜치로 작업 공간을 변경한다. 또는 기존 브랜치로 작업 공간을 옮길 수도 있다.</p>
+<p><strong>checkout</strong></p>
+<ul>
+<li><code>git checkout &lt;branch_name&gt;</code> : 해당 브랜치로 작업 공간을 옮길 수 있다.</li>
+<li><code>git checkout -b &lt;branch_name&gt;</code>: 브랜치를 생성하고 해당 브랜치로 작업 공간 이동</li>
+</ul>
+<h2 id="git-workflow">Git Workflow<a class="anchor" href="#git-workflow">#</a></h2>
+<p>master repo(upstream)(master, dev branch) → (fork) → my remote repo(master, dev branch) → (clone) → local repo(dev branch)</p>
+<ol>
+<li>우리의 목적은 upstream branch에서 새로운 기능을 추가하는 것이기 때문에 local repo의 dev branch는 항상 최신화되어 있어야 하며, upstream의 dev branch에서 pull 해야 한다.</li>
+<li>최신화된 local repo의 dev branch에서 기능 별로 새로운  feature branch를 만들어 작업한다.</li>
+<li>feature branch에서 작업이 완료되면 remote repo에 push하는데, 이때 주의할 점은 dev나 master branch에 push하는것이 아니라, remote repo의 feature branch에 push해야 한다는 것이다.</li>
+<li>그리고 remote branch의 feature branch를 upstream repo의 dev branch에 pull request를 날린다.</li>
+<li>upstream repo 관리자가 이 pr을 확인하고 merge하면 하나의 기능 개발이 끝난다.</li>
+</ol>
+<p>local repo에서 만든 branch를 remote repo에 올릴 수 있다.
+<code>git push &lt;remote repo&gt; &lt;local branch&gt;</code> 를 하면, remote repo에 해당 branch가 생성된다. (기존에 있는 경우 push만 됨)</p>
+<p><img src="../images/git-workflow.png" alt="git workflow"></p>
+<h2 id="git-merge와-rebase">Git merge와 rebase<a class="anchor" href="#git-merge와-rebase">#</a></h2>
+<p>다음과 같이 master 브랜치와, master 브랜치에서 파생된 func1 브랜치가 있다고 가정하자</p>
+<p><img src="../images/gitflow.png" alt="git flow"></p>
+<p>merge는 func1 브랜치의 최신 커밋을 master 브랜치의 최신 커밋과 병합한다.</p>
+<pre><code class="language-markdown">$ git merge master func1
+</code></pre>
+<p><img src="../images/gitmerge.png" alt="git merge"></p>
+<p>반면, rebase는 func1 브랜치의 base를 master 브랜치의 커밋으로 옮긴다. 말그대로 <strong>base를 재설정</strong>한다.</p>
+<pre><code class="language-markdown">$ git rebase master func1
+</code></pre>
+<p><img src="../images/gitrebase.png" alt="git rebase"></p>
+<p>해당 명령어를 받으면, git은 다음의 과정을 거쳐 rebase를 수행한다.</p>
+<ol>
+<li>base에서 분기되어 추가된 func1 브랜치의 커밋들을 추려 보관한다</li>
+<li>func1 브랜치의 base를 master 브랜치의 최신 커밋으로 이동시킨다</li>
+<li>func1 브랜치에서 생성한 커밋을 새로 적용한다</li>
+</ol>
+
+
+              
+          </article>
+          
+
+<ul class="tags__list">
+    
+    <li class="tag__item">
+        <a class="tag__link" href="https://nittre.github.io/tags/git/">git</a>
+    </li></ul>
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="https://nittre.github.io/til/til014/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">TIL 014 - 이머시브 코스 첫날</span>
+    </a>
+  
+
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="GitHub"
+         href="https://github.com/nittre"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://nittre.github.io/svg/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="Email"
+         href="mailto:youjinlee1997@gmail.com"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://nittre.github.io/svg/email.svg')"></div>
+      </a>
+    
+     
+</div>
+
+            <p>© 2021</p>
+          </footer>
+          </div>
+      </div>
+      
+      <div class="toc-container">
+          
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#til-015">TIL 015</a></li>
+    <li><a href="#-today-log">☕ Today Log</a></li>
+    <li><a href="#nano-사용법">nano 사용법</a></li>
+    <li><a href="#git으로-협업하기">Git으로 협업하기</a></li>
+    <li><a href="#git-충돌-해결">Git 충돌 해결</a>
+      <ul>
+        <li><a href="#그-외-상황">그 외 상황</a></li>
+      </ul>
+    </li>
+    <li><a href="#git-branch">Git branch</a>
+      <ul>
+        <li><a href="#브랜치-만들기">브랜치 만들기</a></li>
+      </ul>
+    </li>
+    <li><a href="#git-workflow">Git Workflow</a></li>
+    <li><a href="#git-merge와-rebase">Git merge와 rebase</a></li>
+  </ul>
+</nav>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+    <script src="/js/table-of-contents.js"></script>
+  
+
+
+</body>
+
+</html>

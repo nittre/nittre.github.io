@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© {year}</copyright>
-    <lastBuildDate>Mon, 22 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 Feb 2021 16:48:19 +0900</lastBuildDate>
     
 	<atom:link href="https://nittre.github.io/til/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TIL 015</title>
+      <link>https://nittre.github.io/til/til015/</link>
+      <pubDate>Tue, 23 Feb 2021 16:48:19 +0900</pubDate>
+      
+      <guid>https://nittre.github.io/til/til015/</guid>
+      <description>Git Workflow 너무 신기해</description>
+    </item>
     
     <item>
       <title>TIL 014 - 이머시브 코스 첫날</title>
