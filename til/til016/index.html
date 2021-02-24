@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Til016 - 갑자기 공부할게 많아졌다 | 매일의 공부</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+
+
+  
+  
+    
+ 
+  
+  
+  
+  
+  
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/post.min.319abde7a50351fa807b76128658a33f5f7306ae344682efc9012fad2a11059f.css" integrity="sha256-MZq956UDUfqAe3YShlijP19zBq40RoLvyQEvrSoRBZ8="/>
+  
+    
+    <link type="text/css" rel="stylesheet" href="/css/custom.min.811e28e525f977dafcda16b147e8ad1d07a4063b244adc598f3ea8289723c803.css" integrity="sha256-gR4o5SX5d9r82haxR&#43;itHQekBjskStxZjz6oKJcjyAM="/>
+  
+  
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    { 
+      "@context": "http://schema.org", 
+      "@type": "WebSite", 
+      "url": "https:\/\/nittre.github.io\/til\/til016\/",
+      "name": "Til016 - 갑자기 공부할게 많아졌다",
+      "author": {
+        "@type": "Person",
+        "name": ""
+      },
+      "description": ""
+    }
+  
+  </script>
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" id="navigation">
+  <ul class="nav__list">
+    
+    
+      <li>
+        <a  href="/">About</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+         href="/til">Today I Learned</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+    
+
+    <div class="flex-wrapper">
+      <div class="post__container">
+        <div class="post">
+          <header class="post__header">
+            <h1 id="post__title">Til016 - 갑자기 공부할게 많아졌다</h1>
+            <time datetime="2021-02-25 01:20:21 &#43;0900 KST" class="post__date">2021-02-25</time> 
+          </header>
+          <article class="post__content">
+              
+<h2 id="-today-log">☕ Today Log<a class="anchor" href="#-today-log">#</a></h2>
+<ul>
+<li>정규 시간에 배운 것
+<ul>
+<li>package.json과 npm</li>
+<li>화살표 함수</li>
+<li>구조 분해 문법</li>
+<li>모듈화와 CommonJS</li>
+</ul>
+</li>
+<li>찾아서 공부해본 것
+<ul>
+<li>node.js cycle, node.js module.exports와 exports 객체</li>
+<li>git checkout (특정 파일만 pull 하는 방법)</li>
+</ul>
+</li>
+<li>그 외
+<ul>
+<li>스웨덴어 공부</li>
+</ul>
+</li>
+</ul>
+<p>낮 시간에도 밤에 공부하는 것처럼 빡세게 집중해야겠다. 낮에 페어 일찍 끝나거나 해서 시간 비는데 그 때 너무 늘어지는 느낌.. 그리고 그 댓가로 새벽까지 공부해야 하는 불상사가 발생하는 것 같다.</p>
+<p>그리고 양적으로 공부할 게 많아져서 벅차다. 여태까지 한번도 헬프 데스크에 질문 올린 적 없었는데 오늘 순식간에 두개나 이슈 올렸다. 세상에나 마상에나.. <code>git checkout</code> 관련이랑 node.js 모듈 관련이다. 이제 진짜 이머시브에 올라온게 체감이 된다. 그렇지만 난 다 조질 것이다. 화이팅!</p>
+<ul>
+<li>내일 할일
+<ul>
+<li>node.js cycle 공부하다가 막혀서 help desk에 물어본거 답변 받고 추가공부 하기</li>
+<li>블꾸: TIL Blog 폰트 바꾸기, list-style 바꾸기, 폰트 크기 일관되게 바꾸기</li>
+<li>프리 코스 회고 작성</li>
+</ul>
+</li>
+</ul>
+<h2 id="nodejs로-할-수-있는-것들--할-수-없는-것들">node.js로 할 수 있는 것들 &amp; 할 수 없는 것들<a class="anchor" href="#nodejs로-할-수-있는-것들--할-수-없는-것들">#</a></h2>
+<p><a href="https://nodejs.org/docs/latest-v14.x/api/index.html" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>[node.js 공식 사이트 API 문서 항목]</a>
+ 를 보면 HTTP, HTTPS, Path, Event, Debugger, Console 등 node.js가 다양한 기능을 제공하는 것을 볼 수 있다.</p>
+<p>그러나 node.js는 브라우저와 다른 점이 있다.</p>
+<ol>
+<li>
+<p><strong>DOM이 존재하지 않는다.</strong> 따라서 <code>window</code> 객체와 <code>document</code> 객체가 없다. node.js에서는 <code>window</code> 대신 <code>global</code> 이라는 전역 객체가 있지만 완전히 같지는 않다.</p>
+</li>
+<li>
+<p>node.js에는 <strong>fetch API</strong>가 없다. 따라서 서버에 요청할 때는 다른 방법을 사용해야 한다.</p>
+</li>
+</ol>
+<h2 id="프론트엔드-영역에서도-nodejs는-필요하다">프론트엔드 영역에서도 node.js는 필요하다<a class="anchor" href="#프론트엔드-영역에서도-nodejs는-필요하다">#</a></h2>
+<p>node.js는 프론트엔드와 거리가 멀어보인다. 그러나, 현대의 프론트엔드 개발에는 많은 node.js 모듈과 npm 생태계를 활용한다. 또한 CLI에서 빌드, 패키징, 배포 등을 처리하기도 한다. (나 프론트만 팔거야! 라고 해도 node.js 공부는 해야한다..)</p>
+<h2 id="packagejson과-npm">package.json과 npm<a class="anchor" href="#packagejson과-npm">#</a></h2>
+<p><strong>바퀴를 재발명 하지 마라</strong></p>
+<p>개발을 할 때 모든 걸 다 만들어 쓸 필요는 없다. 다른 똑똑한 개발자들이 만들어놓은 검증된 코드(모듈)을 가져다 사용하는 것이 우리에게 더 이롭다.</p>
+<p>node.js에서는 이렇게 &lsquo;남이 만들어놓은 검증된 코드'를 <strong>npm 모듈</strong>이라고 부른다. 그리고 내가 사용하는 npm 모듈에 대한 정보를 <strong>package.json</strong>에 담아둔다. 다시 말해, package.json 파일에는 <strong>프로젝트 전반에 관한 정보</strong>가 들어있다. 그리고 실제 npm 모듈들은 <code>node_modules</code>라는 디렉토리에 담긴다.</p>
+<p>npm 모듈의 npm은 <strong>Node Package Manager</strong>로, node.js 환경에서 외부 라이브러리(모듈)를 다운로드 할 수 있게 해주는 일종의 모듈 스토어이다.</p>
+<p>package.json에는 다음의 것들이 담겨있다.</p>
+<ul>
+<li><strong>프로젝트 정보 (name, version, description, main, repository, author, license)</strong></li>
+<li><strong>CLI에서 사용할 수 있는 명령어 (scripts)</strong></li>
+<li><strong>개발과 관련된 dependencies (dependencies, devDependencies)</strong></li>
+</ul>
+<p><img src="../../images/packagejson.png" alt="package.json"></p>
+<p>이렇게 package.json에는 해당 프로젝트에 어떤 모듈을 사용하는지 적혀있다.</p>
+<p>따라서 프로젝트의 소스코드를 넘겨줄 때 다운로드 받은 모듈들(node_module 폴더)을 전부 넘겨줄 필요 없이 package.json만 넘겨주면 된다. 어차피 package.json에 어떤 모듈을 쓰는지 전부 나와있고, 소스코드를 받는 사람은 package.json을 보고 해당 모듈들을 직접 다운로드 받으면 되기 때문이다.</p>
+<p><code>npm install</code> 명령어를 실행하면 npm이 알아서 node_modules 폴더를 만들고 package.json에 적힌 모듈들을 다운로드해준다.</p>
+<h3 id="dependency의존성">dependency(의존성)<a class="anchor" href="#dependency의존성">#</a></h3>
+<p>dependency(의존성)은 <strong>개발이나 실행할 때 프로젝트가 의존하는 모듈</strong>을 의미한다. package.json에는 dependencies와 devDependencies가 있는데, 둘은 무슨 차이일까?</p>
+<p><strong>dependencies</strong>는 프로젝트가 동작하기 위해 반드시 필요한 모듈들이 적혀있다.</p>
+<p><code>npm install &lt;package_name&gt; --save</code>를 실행하면 해당 패키지를 다운로드 받고 package.json의 dependencies에 해당 모듈을 추가해준다. (<code>—-save</code> 옵션은 생략해도 된다)</p>
+<p><strong>devDependencies</strong>에는 <strong>프로젝트를 개발할 때 필요한 모듈</strong>이 적혀있으며, 이 모듈들은 실제 프로젝트가 동작할 때는 직접적인 영향을 주지 않는다.</p>
+<p>패키지를 다운로드 할 때 <code>--save-dev</code> 옵션을 추가하면 자동으로 devDependencies에 추가된다. (<code>npm install &lt;package_name&gt; --save-dev</code>)</p>
+<h3 id="npm-scripts">npm scripts<a class="anchor" href="#npm-scripts">#</a></h3>
+<p>npm으로 실행하는 명령어를 <strong>npm script</strong>라고 하며, package.json의 <strong>scripts</strong>는 CLI에서 사용할 수 있는 명령을 지정하는 곳이다.  CLI에서 실행할 때는 <code>npm run &lt;script name&gt;</code>으로 실행한다.</p>
+<pre><code class="language-json">// package.json
+(...)
+&quot;scripts&quot;: {
+	&quot;start&quot;: &quot;npm start&quot;
+} 
+</code></pre>
+<pre><code class="language-bash">$ npm run start  # npm start가 실행된다
+</code></pre>
+<h2 id="화살표-함수arrow-function">화살표 함수(Arrow Function)<a class="anchor" href="#화살표-함수arrow-function">#</a></h2>
+<p>화살표 함수는 함수 표현식을 축약한 형태와 비슷하다.</p>
+<pre><code class="language-jsx">// 함수 표현식
+const square = function (num) {
+  return num*num;
+}
+</code></pre>
+<pre><code class="language-jsx">// 화살표 함수
+const square = (num) =&gt; {
+  return num*num;
+}
+</code></pre>
+<p>만약 함수의 구문에 return문만 있는 경우, 중괄호와 return 키워드를 생략할 수 있다.</p>
+<pre><code class="language-jsx">const square = (num) =&gt; num*num;
+const square = (num) =&gt; (num*num); // 소괄호는 일반적인 괄호치기와 동일
+
+// 중괄호를 사용하면 return 키워드를 명시해야 한다
+const square = (num) =&gt; { num*num } // undefined를 리턴
+</code></pre>
+<h3 id="화살표-함수로-클로저-표현하기">화살표 함수로 클로저 표현하기<a class="anchor" href="#화살표-함수로-클로저-표현하기">#</a></h3>
+<pre><code class="language-jsx">// 함수 표현식
+const adder = function(x) {
+  return function(y) {
+		return x+y
+	}
+}
+adder(5)(7)
+</code></pre>
+<pre><code class="language-jsx">const adder = (x) =&gt; {
+	return y =&gt; x+y
+}
+
+// 또는
+
+const adder = x =&gt; y =&gt; x+y
+</code></pre>
+<h2 id="spread-syntax-rest-parameter">spread syntax, rest parameter<a class="anchor" href="#spread-syntax-rest-parameter">#</a></h2>
+<p><a href="https://velog.io/@nittre/JavaScript-Spread-Syntax-Rest-Parameter-arguments-%EC%A0%95%EB%A6%AC" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>[JavaScript] Spread Syntax, Rest Parameter, arguments 정리</a>
+</p>
+<h2 id="구조-분해-destructing">구조 분해 (Destructing)<a class="anchor" href="#구조-분해-destructing">#</a></h2>
+<p>구조 분해 할당은 Spread Syntax를 이용해 값을 해체하고, 개별 값을 변수에 새로 할당하는 과정을 의미한다.</p>
+<h3 id="분해-후-새-변수에-할당">분해 후 새 변수에 할당<a class="anchor" href="#분해-후-새-변수에-할당">#</a></h3>
+<pre><code class="language-jsx">// 배열
+[a, b, ...rest] = [10,20,30,40,50]
+
+// 객체
+{a, b, ...rest} = {a:10, b:20, c:30, d:40}
+// rest = {c: 30, d: 40}
+</code></pre>
+<h2 id="모듈화">모듈화<a class="anchor" href="#모듈화">#</a></h2>
+<p>node.js는 다양한 내장 모듈을 제공한다.</p>
+<h3 id="모듈-사용법">모듈 사용법<a class="anchor" href="#모듈-사용법">#</a></h3>
+<p><code>npm install</code>로 받은 모듈은 node_modules에 저장된다. 저장된 모듈을 불러오는 방법은 다음과 같다.</p>
+<pre><code class="language-jsx">const fs = require('fs');  // fs 모듈을 불러와 fs 변수에 담음
+</code></pre>
+<h3 id="다른-스크립트를-불러올-때">다른 스크립트를 불러올 때<a class="anchor" href="#다른-스크립트를-불러올-때">#</a></h3>
+<p>모듈은 곧 다른 스크립트이며, npm 모듈은 npm에 올라와있는 스크립트이다. 따라서 다른 스크립트를 불러오는 방법은 모듈을 불러오는 것과 동일하다.</p>
+<pre><code class="language-jsx">// script1.js
+const script2 = require('./script2.js');
+</code></pre>
+<pre><code class="language-jsx">// script2.js
+console.log('hi');
+</code></pre>
+<h3 id="스크립트를-모듈로-만들기">스크립트를 모듈로 만들기<a class="anchor" href="#스크립트를-모듈로-만들기">#</a></h3>
+<p>우리는 script1.js에서 <code>require()</code>로 script2.js를 불러와 변수에 대입하고 있다. 그런데 script2.js에서는 <code>console.log('hi')</code>만 실행할 뿐, 무언가를 리턴하고 있지는 않다.  무언가를 반환해야 할 것 같은데, 무엇을 반환해야 할까?</p>
+<p>내 스크립트를 다른 스크립트가 모듈로 사용하게 하기 위해서는 <code>module.exports</code>를 사용해 다른 스크립트 파일에서 내가 만든 모듈을 사용할 수 있도록 노출시켜야 한다.</p>
+<pre><code class="language-jsx">// script1.js
+const script2 = require('./script2.js');
+console.log(script2);
+</code></pre>
+<pre><code class="language-jsx">// script2.js
+module.exports = 'hi';
+</code></pre>
+<p><code>module.exports</code>의 축약형인 <code>exports</code>를 쓸 수도 있다.</p>
+<p>이러한 모듈 노출 방법과 모듈을 불러오는 방법을 <strong>CommonJS</strong> 모듈 시스템이라고 부른다.</p>
+<h2 id="commonjs">CommonJS<a class="anchor" href="#commonjs">#</a></h2>
+<h3 id="commonjs란">CommonJS란?<a class="anchor" href="#commonjs란">#</a></h3>
+<p>자바스크립트를 브라우저 뿐만 아니라 서버사이드나 데스크톱 애플리케이션에서도 사용하려고 조직한 자발적 워킹 그룹이다. <strong>Common</strong>JS라는 이름도 자바스크립트를 브라우저용 언어가 아닌 <strong>일반적인 범용 언어</strong>로 사용할 수 있도록 하겠다는 의지를 보여준다.</p>
+<p>CommonJS가 주로 하는 일은 범용적으로 자바스크립트를 사용하기 위한 **명세(specification)**을 만드는 일을 한다. 그리고 <strong>Node.js 모듈도 CommonJS에서 만든 Module 명세 1.0을 따르고 있다.</strong></p>
+<h3 id="commonjs의-역사">CommonJS의 역사<a class="anchor" href="#commonjs의-역사">#</a></h3>
+<p>특히 2005년 Ajax의 부상으로 자바스크립트 연산이 증가하였고, 이로 인해 더 빠른 자바스크립트 엔진이 필요했다. 그리고 2008년 구글이 공개한 V8 자바스크립트 엔진은 기존 엔진들보다 훨씬 성능이 좋았다. 브라우저 밖에서도 사용할 수 있을 만큼!</p>
+<p>V8 엔진의 등장으로 자바스크립트에 대한 관심은 더욱 증가했고, 자바스크립트의 공동 표준을 만들기 위해 2009년 CommonJS 그룹이 만들어졌다. 그리고 같은 해 CommonJS API 0.1이 발표되었다.</p>
+<h3 id="서버사이드-자바스크립트의-주요-쟁점">서버사이드 자바스크립트의 주요 쟁점<a class="anchor" href="#서버사이드-자바스크립트의-주요-쟁점">#</a></h3>
+<p>자바스크립트가 범용적으로 쓰이기 위해서는 체계가 필요했다.</p>
+<p>당시 CommonJS에서 제시한 자바스크립트의 핵심적인 문제는 다음과 같았다.</p>
+<ul>
+<li>서로 호환되는 <strong>표준 라이브러리</strong>가 없다.</li>
+<li>데이터베이스에 연결할 수 있는 <strong>표준 인터페이스</strong>가 없다.</li>
+<li><strong>다른 모듈을 삽입하는 표준적인 방법</strong>이 없다.</li>
+<li>코드를 <strong>패키징</strong>해서 <strong>배포</strong>하고 <strong>설치</strong>하는 방법이 필요하다.</li>
+<li>의존성 문제까지 해결하는 <strong>공통 패키지 모듈 저장소</strong>가 필요하다.</li>
+</ul>
+<h3 id="핵심은-모듈화">핵심은 모듈화<a class="anchor" href="#핵심은-모듈화">#</a></h3>
+<p>위의 문제점은 모듈화로 귀결된다. 그리고 CommonJS의 명세는 이 모듈을 어떻게 정의하고 사용할 것인가에 관한 것이다.</p>
+<p>모듈화는 아래와 같이 세 부분으로 이루어진다.</p>
+<ul>
+<li>스코프(Scope): 모든 모듈은 자신만의 독립적인 실행 영역이 있어야 한다.</li>
+<li>정의(Definition): 모듈 정의는 exports 객체를 이용한다.</li>
+<li>사용(Usage): 모듈 사용은 require 함수를 이용한다.</li>
+</ul>
+<h3 id="commonjs를-표준으로-삼는-프레임워크라이브러리">CommonJS를 표준으로 삼는 프레임워크&amp;라이브러리<a class="anchor" href="#commonjs를-표준으로-삼는-프레임워크라이브러리">#</a></h3>
+<ul>
+<li>브라우저용
+<ul>
+<li>curl.js(<a href="http://github.com/unscriptable/curl" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>http://github.com/unscriptable/curl</a>
+)</li>
+<li>SproutCore(<a href="http://sproutcore.com/" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>http://sproutcore.com</a>
+)</li>
+<li>PINF(<a href="http://github.com/pinf/loader-js" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>http://github.com/pinf/loader-js</a>
+)</li>
+<li>기타 등등</li>
+</ul>
+</li>
+<li>서버사이드용
+<ul>
+<li>Node.js(<a href="http://nodejs.org/" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>http://nodejs.org</a>
+)</li>
+<li>Narwhal(<a href="https://github.com/tlrobinson/narwhal" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>https://github.com/tlrobinson/narwhal</a>
+)</li>
+<li>Persevere(<a href="http://www.persvr.org/" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>http://www.persvr.org</a>
+)</li>
+<li>Wakanda(<a href="http://www.wakandasoft.com/" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>http://www.wakandasoft.com</a>
+)</li>
+</ul>
+</li>
+</ul>
+<p><strong>모듈화와 HTML5</strong>
+최근 모듈 로더에서는 HTML5의 로컬 스토리지(localStorage) 연동을 활용하는 사례가 나타나고 있다. 즉, 기존에 모듈을 원격 서버에서 불러오던 것을 로컬 스토리지를 활용해 성능을 극대화하는 것이다. 물론 버전에 따른 의존성은 모두 모듈 로더가 책임진다.</p>
+<p>지금까지는 모든 것을 해결해주는 프레임워크가 대세였지만, 앞으로는 필요한 모듈만 가져다 사용하는 시대가 올 것으로 예상된다. 특히 모바일 환경에서 사이즈가 중요하기 때문에 모듈화는 더욱 중요해졌다. 특히 최신 브라우저가 대부분인 스마트폰에서 로컬 스토리지를 활용한 성능 극대화는 더욱더 필요해 보인다.</p>
+<p>인용: <a href="https://d2.naver.com/helloworld/12864" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>JavaScript 표준을 위한 움직임: CommonJS와 AMD</a>
+</p>
+<h2 id="nodejs-모듈-사용시-주의할-점">node.js 모듈 사용시 주의할 점<a class="anchor" href="#nodejs-모듈-사용시-주의할-점">#</a></h2>
+<h3 id="cycle">Cycle<a class="anchor" href="#cycle">#</a></h3>
+<pre><code class="language-jsx">// a.js
+console.log('a starting');
+exports.done = false;
+const b = require('./b.js');  // 1. b.js를 불러온다
+console.log('in a, b.done = %j', b.done);
+exports.done = true;
+console.log('a done');
+</code></pre>
+<pre><code class="language-jsx">// b.js
+console.log('b starting');
+exports.done = false;
+const a = require('./a.js');  // 2. a.js를 불러온다
+console.log('in b, a.done = %j', a.done);
+exports.done = true;
+console.log('b done');
+</code></pre>
+<pre><code class="language-jsx">// main.js
+console.log('main starting');
+const a = require('./a.js');
+const b = require('./b.js');
+console.log('in main, a.done = %j, b.done = %j', a.done, b.done);
+</code></pre>
+<p><code>const a = require('./a.js');</code> 구문의 실행 과정</p>
+<ol>
+<li><code>a.js</code>가 실행되다가 <code>b.js</code>를 불러온다.</li>
+<li><code>b.js</code>는 다시 <code>a.js</code>를 불러온다.</li>
+<li>이 과정은 무한루프를 발생시킨다. 무한루프를 방지하기 위해, <code>a.js</code> exports 객체의 **완료되지 않은 복사본 (unfinished copy)**가 <code>b.js</code> 모듈로 반환된다.</li>
+<li>그리고 <code>b.js</code> 로딩이 완료되고 <code>b.js</code>의 exports 객체가 <code>a.js</code> 에 제공된다.</li>
+</ol>
+<p>근데 이해 안되는점!!! <code>const a = require('./a.js');</code> 구문 다 실행하고 나면 <code>const b = require('./b.js');</code> 도 실행 될텐데 왜 그건 콘솔에 안찍힐까?</p>
+<h3 id="exports를-쓸-때-주의할-점">exports를 쓸 때 주의할 점<a class="anchor" href="#exports를-쓸-때-주의할-점">#</a></h3>
+<p><code>exports</code>는 <code>module.exports</code>의 축약형(shortcut)으로,  <code>**module.exports</code>를 참조한다**. 즉, <code>exports</code>는 <code>module.exports</code>의 주소를 가지고 있다.</p>
+<p>주소를 가지고 있는 <code>exports</code> 에 값을 대입하게 되면, <code>exports</code>는 더이상 <code>module.exports</code>를 참조하지 않게 된다.</p>
+<pre><code class="language-jsx">//hello.js
+exports = {a:1}; // exports가 module.exports를 참조하지 않게 됨
+								 // module.exports에는 아무것도 안 담긴 상태
+</code></pre>
+<pre><code class="language-jsx">// hello-runner.js
+
+// module.exports에는 아무것도 안담겨있기 때문에 hello.js는 빈 객체를 리턴한다
+const hello = require('./hello.js');
+console.log(hello); // { }
+</code></pre>
+<h3 id="콜백함수에서-moduleexports에-값을-할당하는-경우">콜백함수에서 module.exports에 값을 할당하는 경우<a class="anchor" href="#콜백함수에서-moduleexports에-값을-할당하는-경우">#</a></h3>
+<p><code>module.exports</code>에 값을 할당할 때는 스크립트 실행 시 즉시 이루어지도록 해야 한다. <code>setTimeout</code> 등과 같은 콜백 함수에서 <code>module.exports</code>의 값을 할당할 경우, 값이 할당되기 전에 <code>require()</code>가 undefined를 리턴한다.</p>
+<pre><code class="language-jsx">// x.js
+setTimeout(() =&gt; {
+  module.exports = { a: 'hello' };
+}, 0);
+</code></pre>
+<pre><code class="language-jsx">// y.js
+const x = require('./x');
+console.log(x.a);  // undefined
+</code></pre>
+<ul>
+<li>참고: <a href="https://nodejs.org/dist/latest-v14.x/docs/api/modules.html#modules_module_exports" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>https://nodejs.org/dist/latest-v14.x/docs/api/modules.html#modules_module_exports</a>
+</li>
+</ul>
+<hr>
+<h2 id="git-특정-파일만-pull-하는-방법">git 특정 파일만 pull 하는 방법<a class="anchor" href="#git-특정-파일만-pull-하는-방법">#</a></h2>
+<p>출처: <a href="http://grouchy78er.cafe24.com/?p=637" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>[git] remote 에서 특정 파일만 pull 하기</a>
+</p>
+<pre><code class="language-bash">$ git fetch &lt;remote&gt; &lt;branch&gt;
+$ git checkout &lt;remote/branch&gt; -- &lt;filepath&gt;
+</code></pre>
+<p>여기서 <code>$ git checkout &lt;remote/branch&gt; -- &lt;filepath&gt;</code> 이 부분이 이해가 안되서 헬프 데스크에 질문을 남겼다.</p>
+<p><img src="https://imgur.com/tPWncQh.png" alt="https://imgur.com/tPWncQh"></p>
+<p>그리고 이런 답변을 받았다.</p>
+<p><img src="https://imgur.com/Ed7DPhy.png" alt="https://imgur.com/Ed7DPhy"></p>
+<p>먼저 <code>checkout</code> 부터 공부해보자.</p>
+<h2 id="git-checkout">git checkout<a class="anchor" href="#git-checkout">#</a></h2>
+<p><a href="https://www.atlassian.com/git/tutorials/using-branches/git-checkout" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>https://www.atlassian.com/git/tutorials/using-branches/git-checkout</a>
+ 위주로 정리했습니다.</p>
+<p>Git 용어로 &ldquo;checkout&quot;은 대상 개체가 가지고 있는 여러 버전 간을 스위칭하는 것이다. <code>git checkout</code> 명령은 세개의 개체 <strong>파일, 커밋, 브랜치</strong>에 대한 동작이다.</p>
+<h3 id="브랜치를-checkout-한다는-것">브랜치를 checkout 한다는 것<a class="anchor" href="#브랜치를-checkout-한다는-것">#</a></h3>
+<p>브랜치 checkout 은 작업 디렉토리(working directory)에 있는 파일들을 브랜치에 저장된 버전으로 업데이트하고,  깃에게 이 브랜치에 있는 모든 새로운 커밋들을 기록해 달라고 말하는 작업이다.</p>
+<p>브랜치는 전통적인 SVN 워크플로우에 극적인 변화를 가져왔다. 각각의 기능별로 브랜치를 가지게 됨으로써 기존 기능을 파괴할 걱정 없이 새로운 실험을 시도할 수 있고, 각각의 관련없는 기능들을 동시에 개발할 수 있게 되었다. 게다가, 브랜치는 여러 협업 워크플로우를 지원한다.</p>
+<p><code>git checkout</code> 명령어는 때때로 <code>git clone</code>과 혼동될 수 있다. <code>git clone</code>은 리모트 저장소에서 코드를 가져오고(fetch code from remote), 반면 <code>git checkout</code>은 이미 로컬에 있는 코드의 버전을 전환한다(switch version of code on local) .</p>
+<h3 id="이미-있는-브랜치">이미 있는 브랜치<a class="anchor" href="#이미-있는-브랜치">#</a></h3>
+<p>당신이 작업하고 있는 레포가 어떤 브랜치를 가지고 있다고 가정하자. 당신은 <code>git checkout</code>을 사용해 브랜치를 전환할 수 있다. <code>git branch</code> 명령어로 어떤 브랜치가 사용 가능하고 현재 어떤 브랜치에서 작업중인지 확인할 수 있다.</p>
+<pre><code class="language-bash"># 브랜치 확인
+$ git branch 
+master 
+another_branch 
+feature_inprogress_branch 
+
+# 브랜치 전환
+$ git checkout feature_inprogress_branch
+</code></pre>
+<h3 id="새로운-브랜치">새로운 브랜치<a class="anchor" href="#새로운-브랜치">#</a></h3>
+<p><code>git checkout</code>은 <code>git branch</code>와 손발이 척척 맞는 사이이다. <code>git branch &lt;new_branch&gt;</code>로 새로운 브랜치를 만드는 것처럼, <code>git checkout</code>도 <code>-b</code> 옵션으로 브랜치를 새로 추가할 수 있다.</p>
+<pre><code class="language-bash"># 현재 브랜치에서 feature1이라는 브랜치를 만든다
+$ git branch feature1
+
+# 현재 브랜치에서 feature1이라는 브랜치를 만들고 해당 브랜치로 전환
+$ git checkout -b feature1
+</code></pre>
+<h3 id="리모트-브랜치를-checkout-하기">리모트 브랜치를 checkout 하기<a class="anchor" href="#리모트-브랜치를-checkout-하기">#</a></h3>
+<p>팀으로 일을 할 때는 리모트 레포지토리를 사용하는 것이 일반적이다. 리모트 레포지토리도 로컬 레포지토리처럼 브랜치를 가지고 있다. 리모트 브랜치를 checkout하기 위해서는 먼저 해당 브랜치의 내용물을 가져와야 한다.</p>
+<pre><code class="language-bash"># 리모트 레포의 내용을 가져옴
+$ git fetch --all
+</code></pre>
+<p>Git의 최근 버전에서는 리모트 브랜치를 로컬 브랜치처럼 checkout  할 수 있다.</p>
+<pre><code class="language-bash"># 리모트 레포의 브랜치를 따라가는 로컬 레포를 만들고, 해당 브랜치로 전환
+$ git checkout &lt;remote_branch&gt;
+</code></pre>
+<p>새로운 로컬 브랜치를 만들고 리모트 브랜치의 마지막 커밋으로 초기화 할 수도 있다.</p>
+<pre><code class="language-bash">$ git checkout -b git reset --hard &lt;remote_repo&gt;/&lt;remote_branch&gt;
+</code></pre>
+<p>Git의 옛날 버전에서는 remote에 기반한 새 브랜치를 만들어야 한다.</p>
+<pre><code class="language-bash"># 리모트 레포의 브랜치를 가져와 로컬에 detached HEAD 상태의 브랜치 생성
+$ git checkout &lt;remote_repo&gt;/&lt;remote_branch&gt;
+# detached HEAD 브랜치의 내용을 가져와 새로운 로컬 브랜치로 만들어준다
+$ git swtich -c &lt;local_branch&gt;
+</code></pre>
+<h3 id="detached-heads">Detached HEADS<a class="anchor" href="#detached-heads">#</a></h3>
+<p><strong>detached HEAD</strong> 상태란 무엇인가?</p>
+<p>먼저 HEAD는 Git이 현재 스냅샷을 참조하는 방법이다. 내부적으로, <code>git checkout</code> 명령은 HEAD로 하여금 특정 브랜치나 커밋을 가리키도록 업데이트하는 것 뿐이다. HEAD가 브랜치를 가리킬 때는 문제가 없다.  HEAD는 브랜치를 가리키고, 브랜치는 최신 커밋을 가리키니까.</p>
+<p><img src="https://imgur.com/u9Az2gn.png" alt="https://imgur.com/u9Az2gn"></p>
+<p>그러나 당신이 <strong>커밋을 직접 check out 하면 &lsquo;detached HEAD&rsquo; 상태가 된다.</strong> 커밋을 직접 check out 한다는 것은 브랜치의 특정 커밋을 가리킨다는 것이다.</p>
+<p>아래의 그림에서는 HEAD가 브랜치가 아닌 커밋 b를 가리키고 있다.</p>
+<p><img src="https://imgur.com/4mD7hg2.png" alt="https://imgur.com/4mD7hg2"></p>
+<p>우리의 작업 공간이 커밋 b이기 때문에, 기존 브랜치에 commit할 수가 없다. 이미 커밋 c가 있기 때문이다.</p>
+<p>그래서 Git은 HEAD가 특정 커밋을 가리키는 이 상태를 <strong>detaced HEAD</strong>(분리된 머리) 상태라고 명명했다.</p>
+<p>detached HEAD 상태에서 작업은 할 수 있다. 커밋도 할 수 있다. 다만 그것을 다른 작업과 merge하거나 리모트에 pull 할 수는 없다. detached HEAD 상태에서 작업한 내용물들은 어느 브랜치에도 속해있지 않기 때문이다. 따라서 detached HEAD 상태에서 다른 브랜치로 checkout 하면 다시 detached HEAD 상태 때 했던 작업으로 돌아갈 수 없다. (detached HEAD 일 때 했던 커밋 ID를 알면 돌아갈 수는 있긴 하지만 어렵다.)</p>
+<p>만약 특정 커밋에서 했던 작업을 살리고 싶다면 어떻게 해야 할까? 간단하다. <strong>detached HEAD 상태일 때 했던 작업을 브랜치로 만들어주는 것이다.</strong></p>
+<pre><code class="language-bash">$ git checkout -b &lt;new branch name&gt;
+</code></pre>
+<p>이렇게 하면 detached HEAD 상태일 때 했던 작업과 커밋을 살릴 수 있다.</p>
+<h3 id="이제-다시-문제를-보자">이제 다시 문제를 보자<a class="anchor" href="#이제-다시-문제를-보자">#</a></h3>
+<pre><code class="language-bash">$ git fetch &lt;remote&gt; &lt;branch&gt;
+$ git checkout &lt;remote/branch&gt; -- &lt;filepath&gt;
+</code></pre>
+<p>먼저 fetch로 해당 리모트 브랜치의 내용을 가져온다.</p>
+<p><code>$ git checkout &lt;remote/branch&gt; -- &lt;filepath&gt;</code>는 현재 HEAD가 가리키고 있는 로컬 브랜치에서 특정 파일을 해당 리모트 브랜치의 내용물로 바꿔준다. (로컬 브랜치는 바뀌지 않음)</p>
+<p><code>--</code>는 뒤에 오는 이름이 파일이름이라고 명시하는 것이다. 파일이름과 브랜치명이 같을 때 <code>--</code>를 붙이지 않으면 git이 파일 이름을 브랜치로 잘못 해석할 수도 있다.</p>
+<h3 id="참고git-checkout-remotebranch----pathtofilename">참고git checkout <remote>/<branch> &ndash; &lt;path/to/filename&gt;<a class="anchor" href="#참고git-checkout-remotebranch----pathtofilename">#</a></h3>
+<ul>
+<li><a href="https://www.atlassian.com/git/tutorials/using-branches/git-checkout" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>https://www.atlassian.com/git/tutorials/using-branches/git-checkout</a>
+</li>
+<li><a href="http://sunphiz.me/wp/archives/2266" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>http://sunphiz.me/wp/archives/2266</a>
+</li>
+<li><a href="https://velog.io/@ss-won/Git-Detached-Head" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>https://velog.io/@ss-won/Git-Detached-Head</a>
+</li>
+<li><a href="https://stackoverflow.com/questions/3334475/git-how-to-update-checkout-a-single-file-from-remote-origin-master" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>https://stackoverflow.com/questions/3334475/git-how-to-update-checkout-a-single-file-from-remote-origin-master</a>
+</li>
+</ul>
+
+
+              
+          </article>
+          
+
+<ul class="tags__list">
+    
+    <li class="tag__item">
+        <a class="tag__link" href="https://nittre.github.io/tags/commonjs/">CommonJS</a>
+    </li>
+    <li class="tag__item">
+        <a class="tag__link" href="https://nittre.github.io/tags/es6/">ES6</a>
+    </li>
+    <li class="tag__item">
+        <a class="tag__link" href="https://nittre.github.io/tags/git/">Git</a>
+    </li>
+    <li class="tag__item">
+        <a class="tag__link" href="https://nittre.github.io/tags/javascript/">JavaScript</a>
+    </li>
+    
+    
+    <li class="tag__item">
+        <a class="tag__link" href="https://nittre.github.io/tags/module/">module</a>
+    </li></ul>
+
+ <div class="pagination">
+  
+    <a class="pagination__item" href="https://nittre.github.io/til/til015/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">TIL 015</span>
+    </a>
+  
+
+  
+</div>
+
+          
+          <footer class="post__footer">
+            
+
+
+<div class="social-icons">
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="GitHub"
+         href="https://github.com/nittre"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://nittre.github.io/svg/github.svg')"></div>
+      </a>
+    
+  
+     
+    
+      <a class="social-icons__link" rel="me" title="Email"
+         href="mailto:youjinlee1997@gmail.com"
+         target="_blank" rel="noopener">
+        <div class="social-icons__icon" style="background-image: url('https://nittre.github.io/svg/email.svg')"></div>
+      </a>
+    
+     
+</div>
+
+            <p>© 2021</p>
+          </footer>
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </main>
+
+   
+
+  
+  <script src="/js/index.min.49e4d8a384357d9b445b87371863419937ede9fa77737522ffb633073aebfa44.js" integrity="sha256-SeTYo4Q1fZtEW4c3GGNBmTft6fp3c3Ui/7YzBzrr&#43;kQ=" crossorigin="anonymous"></script>
+  
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/components/prism-core.min.js"></script>
+
+  
+  <script src="https://unpkg.com/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"
+    data-autoloader-path="https://unpkg.com/prismjs@1.20.0/components/"></script>
+
+  
+
+
+</body>
+
+</html>

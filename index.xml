@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© {year}</copyright>
-    <lastBuildDate>Tue, 23 Feb 2021 16:48:19 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 25 Feb 2021 01:20:21 +0900</lastBuildDate>
     
 	<atom:link href="https://nittre.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Til016 - 갑자기 공부할게 많아졌다</title>
+      <link>https://nittre.github.io/til/til016/</link>
+      <pubDate>Thu, 25 Feb 2021 01:20:21 +0900</pubDate>
+      
+      <guid>https://nittre.github.io/til/til016/</guid>
+      <description>낮 시간을 팽팽 버린 죄가 부메랑처럼 돌아오더라</description>
+    </item>
     
     <item>
       <title>TIL 015</title>
